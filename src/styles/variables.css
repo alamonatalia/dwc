@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    :root{
+        /* Design Token Primitive (do not use into the project) */
+        --brand-red-500: red;
+        --brand-red-50: #f3f3f3;
+        /* Design Token Semantic (defined for the project) */
+        --color-text: var(--brand-red-500);
+    }
+    @font-face {
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 100 800;
+        font-display: swap;
+        src: url('/src/assets/fonts/Sora-VariableFont_wght.woff2') format('woff2'),
+             url('/src/assets/fonts/Sora-VariableFont_wght.woff') formmat('woff');
+    }
+
+    :root[data-theme='light']{
+        /* Design Token Components (use into the project) */
+        --color-font: var(--brand-red-500);
+        --iconModeSun: red;
+        --iconModeMoon: transparent;
+    }
+    :root[data-theme='dark']{
+        /* Design Token Components (use into the project) */
+        --color-font: var(--brand-red-50);
+        --iconModeSun: transparent;
+        --iconModeMoon: red;
+    }
+}

@@ -1,0 +1,17 @@
+---
+import Nav from "./Nav.astro"
+import Container from "./scaffolding/Container.astro"
+import SwitchTheme from "./scaffolding/SwitchTheme.astro"
+---
+
+<header>
+    <Container className="bg-red-900">
+        <p>logo</p>
+        <Nav/>
+        <div class="w-[148px]">
+            <div class="relative w-8 h-8 ml-auto">
+                <SwitchTheme/>
+            </div>
+        </div>
+    </Container>
+</header>

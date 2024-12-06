@@ -8,6 +8,5 @@ export default defineConfig({
   server: {
       open: true,
   },
-
   integrations: [tailwind()]
 });
