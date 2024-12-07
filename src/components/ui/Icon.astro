@@ -1,0 +1,22 @@
+---
+import IconLogo from "@icon/IconLogo.astro";
+import IconLogotipo from "@icon/IconLogotipo.astro";
+
+
+const iconMap = {
+    logo: IconLogo,
+    logotipo: IconLogotipo,
+};
+
+interface IconProps {
+    name: keyof typeof iconMap;
+    className?: string;
+}
+
+const { name, className = "" }: IconProps = Astro.props as IconProps;
+
+const IconComponent = iconMap[name];
+
+---
+
+{IconComponent ? <IconComponent class={className}/> : null}

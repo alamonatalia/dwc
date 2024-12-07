@@ -1,10 +1,70 @@
 ---
-import Container from "./scaffolding/Container.astro";
-import Section from "./scaffolding/Section.astro";
+import Container from "@scaffolding/Container.astro";
+import Section from "@scaffolding/Section.astro";
 
 ---
-<Section className="bg-red-100">
-    <Container className="bg-white">
-        Hero
+<Section className="bg-hero bg-no-repeat bg-cover h-svh overflow-hidden">
+    <Container className=" relative h-full">
+        <div class=" absolute top-[50px] left-0  z-10 py-10 px-20 w-full ">
+            <!-- <p class="mb-10 tracking-widest">
+                Remodeling Experts  |  Exceptional Outcome
+            </p> -->
+            <h1 class=" text-[8rem] leading-tight mb-20 text-[var(--brand-gray-50)]">
+                Your Idea, <br> 
+                <span class="pl-40"> Our Craft</span>
+            </h1>
+            <div class="text-center ">
+                <p class=" bg-black/70 text-2xl text-[var(--brand-gray-200)] px-6 py-2 inline-block ml-auto">
+                    We design and manufacture 
+                    <span 
+                        id="dynamic-word"
+                        class="ftn-words font-bold text-[var(--brand-gray-50)] pl-2 min-w-[280px] inline-block">
+                        Kitcken Cabinetry
+                    </span>
+                </p>
+            </div>    
+        </div>   
+            
     </Container>
+    <div class="ftn-overlay"></div>
 </Section>
+
+<style>
+    .ftn-overlay{
+        @apply absolute top-0 left-0;
+        @apply w-full h-full bg-black/50;
+        @apply z-0
+    }
+    @keyframes fadeInOut {
+        0%, 100% {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        30%, 60% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .ftn-words{
+        animation: fadeInOut 5s infinite
+    }
+
+</style>
+
+<script>
+  const words = ["Kitchen Cabinetry", "Bathroom Furniture", "Cabinet Hardware", "Kitchen Sinks", "Granite Countertops", "Marble & Quartz"];
+  let index = 0;
+
+  const changeWord = () => {
+    const dynamicWord = document.getElementById("dynamic-word");
+    if (dynamicWord) {
+        dynamicWord.classList.remove("fade");
+      void dynamicWord.offsetWidth; 
+      index = (index + 1) % words.length;
+      dynamicWord.textContent = words[index];
+      dynamicWord.classList.add("fade");
+    }
+  };
+
+  setInterval(changeWord, 5000); 
+</script>

@@ -5,10 +5,15 @@ export default {
 		extend: {
 			// Design Token Components
 			colors: {
-				colorFont: 'var(--color-font)'
+				ftnText: 'var(--color-font)',
+				ftnBg: 'var(--color-bg-body)',
+				ftnTextNav: 'var(--color-)'
 			},
 			fontFamily: {
 				sora: ['Sora', 'sans-serif'],
+			},
+			backgroundImage: {
+				'hero': 'url("../assets/images/hero.jpg")'
 			}
 		},
 	},
