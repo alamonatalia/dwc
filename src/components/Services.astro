@@ -1,11 +1,62 @@
 ---
 import Container from "@scaffolding/Container.astro";
 import Section from "@scaffolding/Section.astro";
+import Card from "./ui/Card.astro";
+import Service from "./ui/Service.astro";
+import Title from "./ui/Title.astro";
 
 ---
 
-<Container>
+<Container idName="services">
     <Section>
-        Services
+        <Title
+            title="Services"
+        />
+        <ul class="grid grid-cols-3 grid-rows-2 gap-6">
+            <Service
+                number="01."
+                service="Kitchen Cabinetry"
+                description="Acá una breve de esta cosa de servicio "
+            />
+            <Service
+                number="02."
+                service="Bathroom Furniture"
+                description="Acá una breve de esta cosa de servicio "
+            />
+            <Service
+                number="03."
+                service="Cabinet Hardware"
+                description="Acá una breve de esta cosa de servicio "
+            />
+            <Service
+                number="04."
+                service="Kitchen Sinks"
+                description="Acá una breve de esta cosa de servicio "
+            />
+            <Service
+                number="05."
+                service="Granite Countertops"
+                description="Acá una breve de esta cosa de servicio "
+            />
+            <Service
+                number="06."
+                service="Furniture"
+                description="Acá una breve de esta cosa de servicio "
+            />
+            
+            
+        </ul>
+
+        <div>
+            <Card
+                title="Granito"
+            />
+            <Card
+                title="Mármol"
+            />
+            <Card
+                title="Quarzo"
+            />
+        </div>
     </Section>
 </Container>

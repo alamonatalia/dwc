@@ -1,11 +1,27 @@
 ---
 import Container from "@scaffolding/Container.astro";
 import Section from "@scaffolding/Section.astro";
+import Portofolio from "./ui/Portofolio.astro";
+import Title from "./ui/Title.astro";
 
+const images = [
+  { src: "src/assets/images/hero.jpg", alt: "hola"},
+  { src: "src/assets/images/kitchen-1.jpg", alt: "hola"},
+  { src: "src/assets/images/kitchen-1.jpg", alt: "hola"},
+  { src: "src/assets/images/kitchen-1.jpg", alt: "hola"},
+  { src: "src/assets/images/hero.jpg", alt: "hola"},
+  { src: "src/assets/images/kitchen-1.jpg", alt: "hola"},
+  { src: "src/assets/images/kitchen-1.jpg", alt: "hola"},
+  { src: "src/assets/images/kitchen-1.jpg", alt: "hola"},
+  
+]
 ---
 
 <Container>
     <Section>
-        Projects
+      <Title
+        title="Proyectos"
+      />
+        <Portofolio images={images}/>
     </Section>
 </Container>

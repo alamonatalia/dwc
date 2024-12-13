@@ -4,6 +4,7 @@ import Container from "@scaffolding/Container.astro";
 import SwitchTheme from "@scaffolding/SwitchTheme.astro"
 import Icon from "@ui/Icon.astro";
 import Button from "@ui/Button.astro";
+import IconWhatsapp from "./icon/IconWhatsapp.astro";
 
 const headerId = "main-header";
 const logoId = "main-logo";
@@ -12,6 +13,7 @@ const logoId = "main-logo";
 <header 
     id={headerId}
     class="pt-4 fixed w-full z-50 transition-all">
+    
     <Container className="">
         <div class="ftn-nav-container ">
             <a 
@@ -19,12 +21,13 @@ const logoId = "main-logo";
                 href="#" 
                 class="transition-all w-[230px] ">
                 <figure id="logo" class=" overflow-hidden">
-                    <Icon name="logotipo" className="w-auto h-[70px] " />
+                    <Icon name="logotipoHorizontal" className="w-auto h-[70px]" />
                 </figure>
             </a>
             <Nav/>
             <div class="w-[230px] ">
                 <Button href="#contact">
+                    <IconWhatsapp class="w-full h-5 mr-1 fill-current"/>
                     Hablemos!
                 </Button>
             </div>
@@ -69,11 +72,11 @@ const logoId = "main-logo";
 
         if (scrollPosition > 80) {
             header.classList.add(scrollingClass);
-            logo?.classList.add('w-28');
+            logo?.classList.add('w-[6.5rem]');
             // logoSecondary?.classList.remove('text-[0px]');
         } else {
         header.classList.remove(scrollingClass);
-        logo?.classList.remove('w-28');
+        logo?.classList.remove('w-[6.5rem]');
         // logoSecondary?.classList.add('text-[0px]');
         }
     };

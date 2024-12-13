@@ -14,7 +14,17 @@ export default {
 			},
 			backgroundImage: {
 				'hero': 'url("../assets/images/hero.jpg")'
-			}
+			},
+			animation: {
+				zoom: 'zoomBg 10s ease-in-out infinite',
+			  },
+			  keyframes: {
+				zoomBg: {
+				  '0%': { transform: 'scale(1)' },
+				  '50%': { transform: 'scale(1.1)' },
+				  '100%': { transform: 'scale(1)' },
+				},
+			  },
 		},
 	},
 	plugins: [],
