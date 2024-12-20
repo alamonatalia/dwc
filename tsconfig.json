@@ -4,6 +4,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
+      "@/*": ["./"],
       "@components/*": ["src/components/*"],
       "@icon/*": ["src/components/icon/*"],
       "@scaffolding/*": ["src/components/scaffolding/*"],

@@ -12,8 +12,10 @@ export default {
 			fontFamily: {
 				sora: ['Sora', 'sans-serif'],
 			},
-			backgroundImage: {
-				'hero': 'url("../assets/images/hero.jpg")'
+			backgroundImage: { 
+				'hero': 'url("../assets/images/hero.jpg")',
+				'line-v-gradient': 'linear-gradient(0deg, transparent 0%, var(--brand-gray-300) 40%, var(--brand-gray-300) 90%, transparent 100%)',
+				'line-h-gradient': 'linear-gradient(90deg, transparent 0%, var(--brand-gray-400) 40%, var(--brand-gray-400) 90%, transparent 100%)'
 			},
 			animation: {
 				zoom: 'zoomBg 10s ease-in-out infinite',

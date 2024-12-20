@@ -3,38 +3,42 @@ import Container from "@scaffolding/Container.astro";
 import Section from "@scaffolding/Section.astro";
 
 ---
-<Section className="bg-hero w-full h-[100vh] bg-no-repeat bg-center bg-cover overflow-hidden">
+<Section className="bg-hero w-full min-h-[100vh] h-full bg-no-repeat bg-center bg-cover overflow-hidden">
     <Container className=" relative h-full">
-        <div class=" absolute top-[50px] left-0  z-10 py-10 px-20 w-full ">
-            <!-- <p class="mb-10 tracking-widest">
-                Remodeling Experts  |  Exceptional Outcome
-            </p> -->
-            <h1 class=" text-[8rem] leading-tight mb-20 text-[var(--brand-gray-50)]">
-                Your Idea, <br> 
-                <span class="pl-40"> Our Craft</span>
+        <div class=" relative z-10 mx-auto pt-16 pb-8 w-full flex justify-around gap-12 ">
+            <h1 class=" text-[5.5rem] leading-tight mb-20 text-[var(--brand-gray-50)] font-medium">
+                Tu Idea, <br> 
+                <span class=" pl-14 whitespace-nowrap"> nuestro arte...</span>
             </h1>
-            <div class="text-center ">
-                <p class=" bg-black/70 text-2xl text-[var(--brand-gray-200)] px-6 py-2 inline-block ml-auto">
-                    We design and manufacture 
-                    <span 
-                        id="dynamic-word"
-                        class="ftn-words font-bold text-[var(--brand-gray-50)] pl-2 min-w-[280px] inline-block">
-                        Kitcken Cabinetry
-                    </span>
+            <div class=" relative mt-10 max-w-sm">
+                <p class="text-white uppercase text-sm font-semibold text-center tracking-wider w-full px-6 py-4 bg-black/90 border-b-2 border-white">
+                    Servicios de remodelación y Handyman en Miami
                 </p>
+                <p class=" bg-black/70 text-xl text-[var(--brand-gray-200)] px-6 py-10 inline-block ml-auto text-center">
+                    Transformamos tus espacios con soluciones a medida utilizando materiales de alta calidad.
+                </p>
+                <div class="w-0.5 h-[360px] bg-line-v-gradient absolute -top-16 left-0"></div>
+                <div class="w-0.5 h-[360px] bg-line-v-gradient absolute -top-16 right-0"></div>
             </div>    
         </div>   
+
+        <div class="z-10 relative mt-8">
+            <div class="w-full h-0.5 bg-line-h-gradient"></div>
+            <p class="p-6 text-center bg-black/40 text-white text-xl">
+                Somos especialistas en: <span 
+                id="dynamic-word"
+                class="ftn-words pl-4 min-w-[240px] font-bold text-[var(--brand-gray-50)] inline-block">
+                Armarios de Cocina
+            </span>
+            </p>
+        </div>
             
     </Container>
-    <div class="ftn-overlay"></div>
+    <!-- <div class="ftn-overlay"></div> -->
 </Section>
 
 <style>
-    .ftn-overlay{
-        @apply absolute top-0 left-0;
-        @apply w-full h-full bg-black/50;
-        @apply z-0
-    }
+
     @keyframes fadeInOut {
         0%, 100% {
             opacity: 0;
@@ -52,7 +56,7 @@ import Section from "@scaffolding/Section.astro";
 </style>
 
 <script>
-  const words = ["Kitchen Cabinetry", "Bathroom Furniture", "Cabinet Hardware", "Kitchen Sinks", "Granite Countertops", "Marble & Quartz"];
+  const words = ["Armarios de Cocina", "Muebles de Baño", "Herrajes para Armarios", "Fregaderos de Cocina", "Encimeras de Granido", "Mármol & Cuarzo"];
   let index = 0;
 
   const changeWord = () => {

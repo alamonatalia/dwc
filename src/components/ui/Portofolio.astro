@@ -1,17 +1,21 @@
 ---
-import type { Props } from "../../types";
+import type { Props } from "../../types.ts"; 
 
-const { images }: Props = Astro.props;
+const props = Astro.props as Props;
+const { images = [], title = "Default title" } = props;
 ---
 
 <div class="columns-3 gap-4">
     {images.map((images) => (
-        <div class="mb-4 break-inside-avoid">
+        <div class="mb-4 break-inside-avoid relative">
             <img 
                 src={images.src} 
                 alt={images.alt || "Image"}
-                class="w-full h-auto object-cover rounded-lg shadow-md" 
+                class="w-full h-auto object-cover shadow-md" 
             />
+            <p class="absolute bottom-0 left-0 px-3 py-1 bg-black/50 text-white text-sm">
+                {images.title || "Titulo"} 
+            </p>
         </div>
         
     ))}

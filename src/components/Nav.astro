@@ -7,8 +7,9 @@ interface Link {
 const links = [
 	// { text: "Inicio", href: "#" },
     { text: "Nosotros", href: "#company" },
-    { text: "Proyectos", href: "#projects" },
     { text: "Servicios", href: "#services" },
+    { text: "Proyectos", href: "#projects" },
+    { text: "Contacto", href: "#contact"}
 ];
 const menuId = "mobile-menu";
 ---
@@ -22,7 +23,7 @@ const menuId = "mobile-menu";
                 <li>
                     <a
                         href={link.href}
-                        class=" font-sharp_grotesk_light text-sm text-[var(--brand-gray-300)] px-3 py-2 mx-1 block rounded-md transition duration-200 hover:bg-white/20 hover:text-[var(--brand-gray-50)]"
+                        class=" font-sharp_grotesk_light text-sm text-[var(--brand-gray-200)] px-3 py-2 mx-1 block transition duration-200 hover:bg-white/30 hover:text-[var(--brand-gray-50)]"
                     >
                         {link.text}
                     </a>
