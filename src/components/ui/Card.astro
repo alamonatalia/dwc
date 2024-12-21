@@ -9,9 +9,9 @@ const {
 } = Astro.props;
 ---
 
-<div class="flex items-start gap-4 w-full">
+<div class="sm:flex items-start gap-4 w-full">
     {icon && (
-        <Icon name={icon} className="w-40 h-14"/>
+        <Icon name={icon} className="w-40 h-14 mb-4"/>
     )}
     <div class="w-full">
         <h2 class="text-xl font-medium pb-1 border-b-2 border-[var(--brand-gray-950)]">
