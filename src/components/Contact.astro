@@ -1,17 +1,21 @@
 ---
 import Container from "@scaffolding/Container.astro";
 import Section from "@scaffolding/Section.astro";
+import Title from "./ui/Title.astro";
 
 ---
 
-<Container idName="contact">
-    <Section>
+<Container idName="contact" className="bg-[var(--brand-gray-100)]">
+    <Section className="">
+        <Title
+            title="¿Listos para empezar tu proyecto?"
+        />
         <div>
             <h3>
-                ¿Listos para empezar tu proyecto?
+                
             </h3>
             <p>
-                Contáctanos y hablemos sobre cómo podemos transformar tu visión en realidad con nuestro servicio excepcional y atención al detalle.
+                Contáctanos y da el primer paso hacia la remodelación que siempre has querido
             </p>
         </div>
     </Section>

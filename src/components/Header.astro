@@ -5,6 +5,7 @@ import SwitchTheme from "@scaffolding/SwitchTheme.astro"
 import Icon from "@ui/Icon.astro";
 import Button from "@ui/Button.astro";
 import IconWhatsapp from "./icon/IconWhatsapp.astro";
+import IconArrow from "./icon/IconArrow.astro";
 
 const headerId = "main-header";
 const logoId = "main-logo";
@@ -25,10 +26,10 @@ const logoId = "main-logo";
                 </figure>
             </a>
             <Nav/>
-            <div class="w-[230px] ">
-                <Button href="#contact">
-                    <IconWhatsapp class="w-full h-5 mr-1 fill-current"/>
+            <div class="w-[230px] text-right">
+                <Button href="#contact" type="inverted" className="ftn-button group transition-all ease-linear duration-500 ">
                     Hablemos!
+                    <IconArrow class="w-0 h-5 ml-1 group-hover:w-5 transition-all ease-linear duration-200"/>
                 </Button>
             </div>
             <!-- <div>
@@ -48,9 +49,13 @@ const logoId = "main-logo";
         @apply transition-all ease-in-out duration-700 ;
     }
     .ftn-header-scrolling .ftn-nav-container{
-        @apply bg-gray-950/90 backdrop-blur-sm shadow-lg;
-        @apply lg:w-[900px] py-4 px-2 h-14;
+        @apply bg-gray-950/80 backdrop-blur-sm shadow-lg;
+        @apply lg:w-[800px] py-4 px-2 h-16;
         @apply overflow-hidden
+    }
+
+    .ftn-header-scrolling .ftn-nav-container .ftn-button{
+        @apply !p-0
     }
 
     nav{

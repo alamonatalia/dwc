@@ -1,18 +1,20 @@
 ---
 import Container from "@scaffolding/Container.astro";
 import Section from "@scaffolding/Section.astro";
-import Portofolio from "./ui/Portofolio.astro";
-import Title from "./ui/Title.astro";
-
+import Portfolio from "@ui/Portfolio.astro";
+import Title from "@ui/Title.astro";
+import IconArrow from "./icon/IconArrow.astro";
+import Button from "./ui/Button.astro";
+ 
 const images = [
-  { src: "src/assets/images/hero.jpg", alt: "hola", title: "que tul"},
-  { src: "src/assets/images/kitchen-1.jpg", alt: "hola", title: "holis"},
-  { src: "src/assets/images/kitchen-1.jpg", alt: "hola", title: "holis"},
-  { src: "src/assets/images/kitchen-1.jpg", alt: "hola", title: "holis"},
-  { src: "src/assets/images/hero.jpg", alt: "hola", title: "holis"},
-  { src: "src/assets/images/kitchen-1.jpg", alt: "hola", title: "holis"},
-  { src: "src/assets/images/kitchen-1.jpg", alt: "hola", title: "holis"},
-  { src: "src/assets/images/kitchen-1.jpg", alt: "hola", title: "holis"},
+  { src: "src/assets/images/dwc-3.jpg", alt: "hola", title: "Living"},
+  { src: "src/assets/images/dwc-1.jpg", alt: "hola", title: "Tops"},
+  { src: "src/assets/images/dwc-2.jpg", alt: "hola", title: "Techo"},
+  { src: "src/assets/images/dwc-4.jpg", alt: "hola", title: "Estantería"},
+  { src: "src/assets/images/dwc-5.jpg", alt: "hola", title: "Organizador"},
+  { src: "src/assets/images/dwc-6.jpg", alt: "hola", title: "Top Cocina"},
+  { src: "src/assets/images/dwc-7.jpg", alt: "hola", title: "Cambiador"},
+  { src: "src/assets/images/dwc-8.jpg", alt: "hola", title: "Top"},
   
 ]
 ---
@@ -22,6 +24,14 @@ const images = [
       <Title
         title="Proyectos"
       />
-        <Portofolio images={images}/>
+        <Portfolio images={images}/>
+
+        <div class="text-center mt-10">
+          <Button href="#contact" className="group transition-all ease-linear duration-500">
+            Contáctanos hoy
+            <IconArrow class="w-0 h-5 ml-1 group-hover:w-5 transition-all ease-linear duration-200"/>
+          </Button>
+        </div>
+        
     </Section>
 </Container>

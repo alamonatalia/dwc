@@ -12,51 +12,34 @@ import Title from "./ui/Title.astro";
         <Title
             title="Services"
         />
-        <ul class="grid grid-cols-3 grid-rows-2 gap-6">
+        <ul class="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-2 gap-6">
             <Service
                 number="01."
-                service="Kitchen Cabinetry"
-                description="Acá una breve de esta cosa de servicio "
+                bgService="bg-kitchen"
+                service="Sink de Cocina"
             />
             <Service
                 number="02."
-                service="Bathroom Furniture"
-                description="Acá una breve de esta cosa de servicio "
+                bgService="bg-bathroom"
+                service="Muebles de Baño"
             />
             <Service
                 number="03."
-                service="Cabinet Hardware"
-                description="Acá una breve de esta cosa de servicio "
+                bgService="bg-kitchen-2"
+                service="Fregaderos de Cocina"
             />
             <Service
                 number="04."
-                service="Kitchen Sinks"
-                description="Acá una breve de esta cosa de servicio "
+                bgService="bg-top"
+                service="Top de Granito"
             />
             <Service
                 number="05."
-                service="Granite Countertops"
-                description="Acá una breve de esta cosa de servicio "
-            />
-            <Service
-                number="06."
-                service="Furniture"
-                description="Acá una breve de esta cosa de servicio "
-            />
-            
+                bgService="bg-marmol" 
+                service="Mármol & Cuarzo"
+            />            
             
         </ul>
 
-        <div>
-            <Card
-                title="Granito"
-            />
-            <Card
-                title="Mármol"
-            />
-            <Card
-                title="Quarzo"
-            />
-        </div>
     </Section>
 </Container>

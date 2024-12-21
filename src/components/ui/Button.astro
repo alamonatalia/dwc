@@ -1,7 +1,7 @@
 ---
 interface ButtonProps {
     id?: string | undefined;              
-    type?: 'primary' | 'secondary' | 'outline'; 
+    type?: 'solid' | 'ghost' | 'soft' | 'transparent' | 'inverted'; 
     className?: string;        
     disabled?: boolean;        
     href?: string;             
@@ -9,19 +9,25 @@ interface ButtonProps {
 
 const {
     id,
-    type = 'primary',
+    type = 'solid',
     className = '',
     disabled = false,
     href,
 }: ButtonProps = Astro.props;
 
-const commonClasses = 'inline-flex items-center justify-center border border-solid border-white/20 bg-[var(--brand-gray-950)] text-[var(--brand-gray-300)] text-sm px-4 py-2 transition-all duration-200';
+const commonClasses = 'inline-flex items-center justify-center border-2 border-solid border-transparent text-sm font-medium px-5 py-3 transition-all duration-200 active:scale-90 ';
 
 const buttonClasses = `${commonClasses} 
-    ${type === 'primary'
-    ? ' hover:scale-95 bg-token_bg_btn_cta text-token_text_btn_cta  hover:bg-token_bg_btn_cta_hover hover:text-token_text_btn_cta_hover'
-    : type === 'secondary'
-    ? 'hover:scale-95 bg-gray-500 text-white'
+    ${type === 'solid'
+    ? 'bg-[var(--brand-gray-900)] text-[var(--brand-gray-50)] hover:bg-[var(--brand-gray-700)] active:bg-[var(--brand-gray-950)]'
+    : type === 'ghost'
+    ? 'border-[var(--brand-gray-900)] text-[var(--brand-gray-900)] hover:bg-[var(--brand-gray-100)] active:bg-[var(--brand-gray-200)]'
+    : type === 'soft'
+    ? 'bg-[var(--brand-gray-50)] hover:bg-[var(--brand-gray-100)] active:bg-[var(--brand-gray-200)]'
+    : type === 'transparent'
+    ? 'hover:bg-[var(--brand-gray-100)] active:bg-[var(--brand-gray-200)]'
+    : type === 'inverted'
+    ? 'bg-[var(--brand-gray-50)] hover:bg-[var(--brand-gray-100)] active:bg-white'
     : 'bg-transparent text-blue-500'
 } ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'} ${className}`
 ---

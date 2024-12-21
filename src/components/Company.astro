@@ -2,56 +2,31 @@
 import Container from "@scaffolding/Container.astro";
 import Section from "@scaffolding/Section.astro";
 import Icon from "@ui/Icon.astro";
+import Button from "./ui/Button.astro";
+import Line from "@ui/Line.astro";
+import IconArrow from "./icon/IconArrow.astro";
 
 ---
 
 <Container idName="company">
-    <Section className="flex gap-10">
-        <div class="border border-red-200 p-10 relative">
-            <div class="relative w-80 h-72 bg-yellow-100 z-10"></div>
-            <div class="w-32 h-56 bg-slate-400 absolute top-0 right-0 z-0"></div>
+    <Section className="lg:flex gap-10 relative">
+        <div class=" w-full p-10 relative">
+            <div class="w-52 h-56 bg-[var(--brand-gray-400)] absolute top-0 right-0 z-0"></div>
+            <div class="bg-marmol bg-cover h-80 min-w-96 w-full z-10 relative"></div>
+
         </div>
-        <div class="border border-green-200 w-full p-10">
-            <p class="uppercase text-base mb-4">
-                Bienvenidos a Designer Wood Cabinets
+        <Line variant="vertical"/>
+        <div class="max-w-3xl p-10">
+            <h2 class="uppercase text-xl mb-4 tracking-widest font-semibold pb-3 border-b-2 border-[var(--brand-gray-900)]">
+                Bienvenidos a Designer Wood Cabinets 
+            </h2>
+            <p class="mb-6">
+                Somos un equipo apasionado por lograr espacios funcionales y llenos de vida. Desde nuestras primeras remodelaciones hasta los proyectos más desafiantes de hoy, hemos aprendido que lo más importante es entender las necesidades de nuestros clientes y convertir sus ideas en realidad.
             </p>
-            <h3 class="text-2xl mb-4">
-                Com más de 10 años de experiencia, te ayudamos a rediseñar cada esquina de tu hogar.
-            </h3>
-            <p class="mb-4">
-                Servicio profesional que entrega una renovación completa de su cocina o simplemente una actualización de sus accesorios.
-            </p>
-            <div class="flex ">
-                <ul class="w-full">
-                    <li class="flex gap-2">
-                        <Icon name="logo" className="h-6"/>
-                        Servicio personalizado
-                    </li>
-                    <li class="flex gap-2">
-                        <Icon name="logo" className="h-6"/>
-                        Item 2
-                    </li>
-                    <li class="flex gap-2">
-                        <Icon name="logo" className="h-6"/>
-                        Item 3
-                    </li>
-                </ul>
-                <ul class="w-full">
-                    <li class="flex gap-2">
-                        <Icon name="logo" className="h-6"/>
-                        Item 4
-                    </li>
-                    <li class="flex gap-2">
-                        <Icon name="logo" className="h-6"/>
-                        Item 5
-                    </li>
-                    <li class="flex gap-2">
-                        <Icon name="logo" className="h-6"/>
-                        Item 6
-                    </li>
-                </ul>
-            </div>
-            
+            <Button href="#contact" className="group transition-all ease-linear duration-500">
+                Solicita tu cotización hoy
+                <IconArrow class="w-0 h-5 ml-1 group-hover:w-5 transition-all ease-linear duration-200"/>
+            </Button>
         </div>
     </Section>
 </Container>
