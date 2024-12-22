@@ -7,8 +7,9 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   // Para GitHub Pages
+  base: '/dwc',
   site: 'https://alamonatalia.github.io/dwc',
-  base: 'dwc',
+  
 
   server: {
       open: true,
