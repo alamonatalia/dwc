@@ -8,8 +8,10 @@ import IconArrow from "./icon/IconArrow.astro";
 
 ---
 
-<Container idName="company">
-    <Section className="sm:flex gap-10 relative">
+<Section 
+    id="company">
+    <Container 
+        class="sm:flex gap-10 relative">
         <div class=" w-full lg:p-10 relative">
             <div class="w-52 h-56 bg-[var(--brand-gray-400)] absolute top-0 right-0 z-0"></div>
             <div class="bg-marmol bg-cover h-80 w-full sm:w-96 z-10 relative"></div>
@@ -22,10 +24,12 @@ import IconArrow from "./icon/IconArrow.astro";
             <p class="mb-6">
                 Somos un equipo apasionado por lograr espacios funcionales y llenos de vida. Desde nuestras primeras remodelaciones hasta los proyectos más desafiantes de hoy, hemos aprendido que lo más importante es entender las necesidades de nuestros clientes y convertir sus ideas en realidad.
             </p>
-            <Button href="#contact" className="group transition-all ease-linear duration-500">
+            <Button 
+                href="#contact" 
+                class="group">
                 Solicita tu cotización hoy
                 <IconArrow class="w-0 h-5 ml-1 group-hover:w-5 transition-all ease-linear duration-200"/>
             </Button>
         </div>
-    </Section>
-</Container>
+    </Container>
+</Section>

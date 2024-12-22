@@ -1,34 +1,44 @@
 ---
 interface ButtonProps {
     id?: string | undefined;              
-    type?: 'solid' | 'ghost' | 'soft' | 'transparent' | 'inverted'; 
-    className?: string;        
+    type?: 'solid' | 'ghost' | 'soft' | 'transparent' | 'inverted' | 'transparentInverted'; 
+    class?: string;      
+    target?: string;  
     disabled?: boolean;        
-    href?: string;             
+    href?: string;   
+    size?: 'normal' | 'small';         
 }
 
 const {
     id,
     type = 'solid',
-    className = '',
+    class: className = "",
     disabled = false,
+    target,
     href,
+    size = 'normal'
 }: ButtonProps = Astro.props;
 
-const commonClasses = 'inline-flex items-center justify-center border-2 border-solid border-transparent text-sm font-medium px-5 py-3 transition-all duration-200 active:scale-90 ';
+const commonClasses = 'inline-flex items-center justify-center border-2 border-solid border-transparent text-sm font-medium transition-all ease-linear duration-200 active:scale-90 ';
 
-const buttonClasses = `${commonClasses} 
+const sizeClasses = size === 'small'
+    ? 'px-5 py-3'
+    : 'px-5 py-3'
+
+const buttonClasses = `${commonClasses} ${sizeClasses} 
     ${type === 'solid'
     ? 'bg-[var(--brand-gray-900)] text-[var(--brand-gray-50)] hover:bg-[var(--brand-gray-700)] active:bg-[var(--brand-gray-950)]'
     : type === 'ghost'
-    ? 'border-[var(--brand-gray-900)] text-[var(--brand-gray-900)] hover:bg-[var(--brand-gray-100)] active:bg-[var(--brand-gray-200)]'
+    ? '!border-[var(--brand-gray-900)] text-[var(--brand-gray-900)] hover:bg-[var(--brand-gray-100)] active:bg-[var(--brand-gray-200)]'
     : type === 'soft'
     ? 'bg-[var(--brand-gray-50)] hover:bg-[var(--brand-gray-100)] active:bg-[var(--brand-gray-200)]'
     : type === 'transparent'
-    ? 'hover:bg-[var(--brand-gray-100)] active:bg-[var(--brand-gray-200)]'
+    ? 'bg-transparent hover:bg-[var(--brand-gray-100)] active:bg-[var(--brand-gray-200)]'
     : type === 'inverted'
     ? 'bg-[var(--brand-gray-50)] hover:bg-[var(--brand-gray-100)] active:bg-white'
-    : 'bg-transparent text-blue-500'
+    : type === 'transparentInverted'
+    ? 'text-[var(--brand-gray-200)] hover:text-white hover: hover:border-[var(--brand-gray-200)]'
+    : 'bg-transparent'
 } ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'} ${className}`
 ---
 
@@ -38,7 +48,8 @@ const buttonClasses = `${commonClasses}
         id={id}
         href={href}
         class={buttonClasses}
-        aria-disabled={disabled}  
+        aria-disabled={disabled} 
+        target={target} 
     >
         <slot/>
     </a>

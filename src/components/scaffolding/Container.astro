@@ -1,12 +1,14 @@
 ---
 
 const { 
-    className = "",
-    idName = ""
+    class: className = "",
+    id: idName = ""
  } = Astro.props;
 
 ---
 
-<div id={idName || undefined} class={`px-8 max-w-7xl mx-auto ${className}`}>
+<div 
+    id={idName || undefined} 
+    class={`px-8 max-w-7xl mx-auto ${className}`}>
     <slot/>
 </div>

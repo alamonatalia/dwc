@@ -15,19 +15,23 @@ const logoId = "main-logo";
     id={headerId}
     class="pt-4 fixed w-full z-50 transition-all">
     
-    <Container className="">
+    <Container 
+        class="!px-4">
         <div class="ftn-nav-container ">
             <a 
                 id={logoId} 
-                href="#" 
-                class="transition-all w-[230px] ">
+                href="#hero" 
+                class="transition-all w-[100px] sm:w-[230px] ">
                 <figure id="logo" class=" overflow-hidden">
                     <Icon name="logotipoHorizontal" className="w-auto h-[70px]" />
                 </figure>
             </a>
             <Nav/>
             <div class="w-[230px] text-right">
-                <Button href="#contact" type="inverted" className="ftn-button group transition-all ease-linear duration-500 ">
+                <Button 
+                    href="#contact" 
+                    type="inverted" 
+                    class="ftn-button group">
                     Hablemos!
                     <IconArrow class="w-0 h-5 ml-1 group-hover:w-5 transition-all ease-linear duration-200"/>
                 </Button>

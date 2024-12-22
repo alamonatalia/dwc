@@ -1,9 +1,15 @@
 ---
 const {
-    title
+    class: className = "",
+    title,
+    subtitle
 } = Astro.props;
 ---
 
-<h2 class=" font-bold text-center text-3xl mb-10 text-[var(--brand-gray-900)]">
+<h2 
+    class={`font-bold text-center text-3xl mb-6 text-[var(--brand-gray-900)] ${className}`}>
     {title}
 </h2>
+<p class="text-center mb-10">
+    {subtitle}
+</p>

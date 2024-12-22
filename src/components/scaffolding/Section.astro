@@ -1,15 +1,15 @@
 ---
 
 const { 
-    idName = "",
-    className = "",
+    class: className = "",
+    id: idName = ""
  } = Astro.props;
 
 ---
 
 <section 
     id={idName || undefined} 
-    class={`pt-20 pb-12 ${className}`}>
+    class={`pt-24 pb-12 ${className}`}>
 
         <slot/>
 
