@@ -27,7 +27,7 @@ const sizeClasses = size === 'small'
 
 const buttonClasses = `${commonClasses} ${sizeClasses} 
     ${type === 'solid'
-    ? 'bg-[var(--brand-gray-900)] text-[var(--brand-gray-50)] hover:bg-[var(--brand-gray-700)] active:bg-[var(--brand-gray-950)]'
+    ? 'bg-[var(--brand-gray-900)] text-[var(--brand-gray-50)] hover:bg-[var(--brand-gray-950)] hover:shadow-md active:bg-[var(--brand-gray-950)]'
     : type === 'ghost'
     ? '!border-[var(--brand-gray-900)] text-[var(--brand-gray-900)] hover:bg-[var(--brand-gray-100)] active:bg-[var(--brand-gray-200)]'
     : type === 'soft'
